@@ -17,8 +17,8 @@ En C, les variables doivent être déclarées avec un type de données spécifiq
   - `long` : pour les entiers longs.
 
 - **Décimaux :**
-  - `float` : pour les nombres décimaux à virgule flottante (simple précision).
-  - `double` : pour les nombres décimaux à virgule flottante (double précision).
+  - `float` : pour les nombres décimaux à virgule flottante.
+  - `double` : pour les nombres décimaux à virgule flottante.
 
 - **Caractères :**
   - `char` : pour stocker des caractères.
@@ -181,11 +181,84 @@ Exemple :
 int sum = addition(5, 3);
 ```
 
+#### Fonction main
+
+La fonction main est le point de départ de l'exécution du programme en C. C'est la fonction obligatoire à laquelle le contrôle du programme est d'abord transféré lorsqu'il démarre. La structure de la fonction main est la suivante :
+
+```c
+int main() {
+    // Instructions
+    return 0;
+}
+```
+
+- `int` : Type de donnée renvoyé par la fonction main. Ici, int indique que le programme renvoie un entier.
+- `return 0` : La valeur de retour 0 indique une sortie normale du programme.
+
+La fonction main peut accepter des arguments. La signature standard pour la fonction main avec des arguments est la suivante :
+
+```c
+int main(int argc, char *argv[])
+```
+
+où :
+
+- `argc`: C'est un entier qui représente le nombre d'arguments passés au programme en ligne de commande.
+- `argv` : C'est un tableau de pointeurs vers des chaînes de caractères, où chaque élément du tableau est un argument passé au programme. argv[0] est généralement le nom du programme lui-même, et argv[1], argv[2], etc., sont les arguments passés.
+
+Voici un exemple simple pour illustrer l'utilisation de argc et argv :
+
+Supposons que vous compilez votre programme C et l'exécutez en ligne de commande de la manière suivante :
+
+```bash
+./mon_programme argument1 argument2
+```
+Le code correspondant dans votre fonction main pourrait ressembler à ceci :
+
+```c
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+    printf("Le nombre d'arguments passés est : %d\n", argc);
+
+    // Affichage des arguments passés
+    for (int i = 0; i < argc; i++) {
+        printf("Argument %d : %s\n", i, argv[i]);
+    }
+
+    return 0;
+}
+```
+
+Lors de l'exécution de ce programme avec les arguments "argument1" et "argument2", la sortie attendue serait :
+
+```
+Le nombre d'arguments passés est : 3
+Argument 0 : ./mon_programme
+Argument 1 : argument1
+Argument 2 : argument2
+```
+
+`argc` vaut 3 car il y a trois éléments passés lors de l'exécution :
+- `argv[0]` contient le nom du programme lui-même.
+- `argv[1]` contient le premier argument "argument1".
+- `argv[2]` contient le deuxième argument "argument2".
+
+Cette fonctionnalité est utile pour traiter des arguments passés au programme à partir de la ligne de commande, permettant au programme d'être plus flexible et configurable.
+
 #### Exercices :
 
 1. Écrivez une fonction nommée `carre` prenant un entier en paramètre et renvoyant le carré de cet entier.
 2. Appelez la fonction `carre` avec un entier de votre choix et stockez le résultat dans une variable.
 3. Appelez la fonction `carre` avec un entier de votre choix, stockez le résultat dans une variable que vous multipliez par 20 en utilisant un opérateur d'assignation.
+4. Écrivez une fonction `main()` permettant de lancer votre fonction carré pour le 1er argument, auquel on récupère le résultat et additionne l'argument 2. Exemple: 
+
+```
+> ./programme 5 20 
+
+Le résultat de la fonction carré de 5 est 25
+Le résultat de 25 + 20 = 45
+```
 
 ---
 
