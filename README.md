@@ -251,7 +251,7 @@ Cette fonctionnalité est utile pour traiter des arguments passés au programme 
 1. Écrivez une fonction nommée `carre` prenant un entier en paramètre et renvoyant le carré de cet entier.
 2. Appelez la fonction `carre` avec un entier de votre choix et stockez le résultat dans une variable.
 3. Appelez la fonction `carre` avec un entier de votre choix, stockez le résultat dans une variable que vous multipliez par 20 en utilisant un opérateur d'assignation.
-4. Écrivez une fonction `main()` permettant de lancer votre fonction carré pour le 1er argument, auquel on récupère le résultat et additionne l'argument 2. Exemple: 
+4. Écrivez une fonction `main()` permettant de lancer votre fonction carré pour le 1er argument, auquel on récupère le résultat et additionne l'argument 2. L'affichage doit-être comme ci-dessous: 
 
 ```
 > ./programme 5 20 
@@ -259,6 +259,9 @@ Cette fonctionnalité est utile pour traiter des arguments passés au programme 
 Le résultat de la fonction carré de 5 est 25
 Le résultat de 25 + 20 = 45
 ```
+
+⚠️ L'exercice 4 doit être écris dans le fichier main.c et testé avec l'aide du Makefile: `make test`.
+Votre code sera automatiquement validée ou non par Github au push.
 
 ---
 
