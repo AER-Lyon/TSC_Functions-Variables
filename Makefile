@@ -1,3 +1,7 @@
+# NE PAS MODIFIER
+# NE PAS MODIFIER
+# NE PAS MODIFIER
+
 a.out:
 	gcc main.c
 

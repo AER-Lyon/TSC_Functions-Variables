@@ -1,3 +1,7 @@
+# NE PAS MODIFIER
+# NE PAS MODIFIER
+# NE PAS MODIFIER
+
 echo "Running tests..."
 echo
 

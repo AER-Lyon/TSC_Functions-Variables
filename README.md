@@ -260,6 +260,8 @@ Le résultat de la fonction carré de 5 est 25
 Le résultat de 25 + 20 = 45
 ```
 
+ℹ️ Vous avez le droit à la fonction `atoi` de la librairie standard pour convertir un `char *` en `int`, ainsi qu'à la fonction `printf` pour l'affichage.
+
 ⚠️ L'exercice 4 doit être écris dans le fichier main.c et testé avec l'aide du Makefile: `make test`.
 Votre code sera automatiquement validée ou non par Github au push.
 
